@@ -23,11 +23,11 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.linear_model import LogisticRegression
 from xgboost import XGBClassifier
 
-# Tuning
-from sklearn.model_selection import GridSearchCV
-
 # Initializaitons
 from peter_initializations import *
+
+# Tuning
+from sklearn.model_selection import GridSearchCV
 
 # Data Processing
 from sklearn.model_selection import train_test_split
@@ -37,10 +37,12 @@ from sklearn.preprocessing import MinMaxScaler
 # K-Fold Cross Validation
 from sklearn.model_selection import StratifiedKFold
 
+# Metrics
+from sklearn.metrics import accuracy_score, make_scorer, matthews_corrcoef
+
 # Global Variables
 PATH = os.getcwd()
 RAND = 42
-
 
 # Create the classification models.
 def classification_models():
@@ -105,7 +107,7 @@ def hyperparameter_optimizer(x, y, params, logger=log_files('clf.log'), model=SV
     logger.debug('GridSearchCV Starting:')
     logger.debug('-----------------------\n')
 
-    reg = GridSearchCV(model, param_grid=params, scoring='neg_root_mean_squared_error', cv=5, 
+    reg = GridSearchCV(model, param_grid=params, scoring=make_scorer(matthews_corrcoef), cv=5, 
                        return_train_score=True, n_jobs=-1)
     reg.fit(x,y)
 
@@ -118,6 +120,7 @@ def hyperparameter_optimizer(x, y, params, logger=log_files('clf.log'), model=SV
 
     return bestparams
 
+# Data Import + MinMaxScaler transformation
 def import_data():
     """Import the dataset and apply MinMaxScaler transformation to it first.
     
@@ -174,6 +177,42 @@ def import_data():
         pickle.dump(scaler, f)
 
     return x_train_full_mms, x_test_mms, y_train_full, y_test
+# Optimization of hyperparameters for regression models using GridSearchCV
+def hyperparameter_optimizer(x, y, params, model=SVC()):
+    """
+    This function is responsible for running GridSearchCV and opatimizing our hyperparameters.  I might need to fine-tune this.
+
+    Parameters
+    ----------
+    x: Input values to perform GridSearchCV with.
+
+    y: Output values to create GridSearchCV with.
+
+    params: Dictionary of parameters to run GridSearchCV on.
+
+    model: The model that we are using for GridSearchCV
+
+    Returns
+    -------
+    bestparams: Optimized hyperparameters for the model that we are running the search on.
+    """
+
+    logger.debug('GridSearchCV Starting:')
+    logger.debug('-----------------------\n')
+
+    reg = GridSearchCV(model, param_grid=params, scoring=make_scorer(matthews_corrcoef), cv=5, 
+                       return_train_score=True, n_jobs=-1)
+    reg.fit(x,y)
+
+    # Showing the best parameters found on the development set.
+    logger.info('Best parameter set: %s' %(reg.best_params_))
+    logger.info('-------------------------\n')
+
+    # Save the best parameters.
+    bestparams = reg.best_params_
+
+    return bestparams
+
 
 logger = log_files('clf.log')
 
@@ -184,7 +223,8 @@ clf_zip = classification_models()
 
 for name, params, model in clf_zip:
     print(f'Model:{name}')
-    skf = StratifiedKFold()
+
+    skf = StratifiedKFold(n_splits=5, shuffle=False, random_state=RAND)
 
 
 # Step 2: Apply Hyperparameter Tuning on all of our models.
