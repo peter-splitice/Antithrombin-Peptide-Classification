@@ -24,6 +24,7 @@ from xgboost import XGBClassifier
 PATH = os.getcwd()
 RAND = 42
 FOLDS = 5
+VARIANCES = [75, 80, 85, 90, 95, 100]
 
 # Creating a logger to record and save information.
 def log_files(logname):
@@ -113,7 +114,7 @@ def import_data():
                                     columns=x_train_full.columns)
     x_test_mms = pd.DataFrame(scaler.transform(x_test), index=x_test.index, columns=x_test.columns)
 
-    with open(PATH + '/dependency.Scaler.pkl', 'wb') as f:
+    with open(PATH + '/peter_classification/Exports/Scaler.pkl', 'wb') as f:
         pickle.dump(scaler, f)
 
     return x_train_full_mms, x_test_mms, y_train_full, y_test
@@ -137,8 +138,8 @@ def classification_models():
                   'class_weight': [None,'balanced'], 'break_ties': [False,True]}
     lin_params = {}
     log_params = {}
-    rfc_params = {'criterion': ['gini','entropy'], 'max_features': ['sqrt','log2',1.0,0.3], 'ccp_alpha': np.arange(0,0.3,0.1),
-                  'n_estimators': np.arange(1,25,1), 'max_depth': np.arange(2,11,1)}
+    rfc_params = {'criterion': ['gini','entropy'], 'max_features': ['sqrt','log2',1.0,0.3], 
+                  'ccp_alpha': np.arange(0,0.3,0.1), 'n_estimators': np.arange(1,25,1), 'max_depth': np.arange(2,11,1)}
     knn_params = {'n_neighbors': np.arange(1,55,2), 'weights': ['uniform', 'distance'], 'leaf_size': np.arange(5,41,2),
                   'p': [1, 2], 'keepdims': [False,True]}
     xgb_params = {'max_depth': np.arange(2,11,1), 'n_estimators': np.arange(1,25,1), 'gamma': np.arange(0,4,1),
