@@ -171,10 +171,12 @@ def sequential_forward_selection(x_train_full, y_train_full, name, skf=Stratifie
     logger.info('--------------------------\n')
 
     # Set the ratios for the number of features we want to extract from forward selection.
-    ratios = np.arange(0.05, 0.55, 0.01)
+    ratios = np.arange(0.05, 0.56, 0.10)
     valid_mcc_high = 0
 
     for ratio in ratios:
+        logger.info(f'Performing Forward Selection with ratio of {ratio}')
+        logger.info('---------------------------------------------------\n')
         sfs = SequentialFeatureSelector(model, n_jobs=-1, scoring=make_scorer(matthews_corrcoef),
                                         cv=skf, n_features_to_select=ratio, direction='forward')
         
@@ -248,6 +250,29 @@ def principal_component_analysis(x_train_full, x_test, y_train_full, y_test, nam
     """
     Function for performaing principal component analysis on our data.  Relies on the VARIANCES global constant
     to be an array consisting of the variances we want to try having PCA to account for.
+
+    Parameters
+    ----------
+    x_train_full: Input values of the dataset.
+
+    x_test: Input values for the test set.
+
+    y_train_full: Output values for the different classes of the dataset.
+    
+    y_test: Output values for the test set.
+
+    model: Model function used for Sequential Feature Selection. 
+
+    name: Name of the model we're working.
+
+    params: Dict of the parameters to hyperparameter tuning with.
+
+    skf: StratifiedKFold object.
+
+    model: Classifier model we are using.
+
+
+    
     """
 
     logger.info(f'PCA Starting {stage}')
@@ -284,11 +309,13 @@ def principal_component_analysis(x_train_full, x_test, y_train_full, y_test, nam
 
         var_stage = stage + (' with %i%% variance' %(variance))
 
+        # Run Hyperparameter tuning and k-fold cross validation for each variance.
         model_var, pca_var_results = clf_trainer(x_train_full_pca, x_test_pca, y_train_full, y_test, params, name,
                                                  var_stage, skf, model)
         
         valid_mcc = float(pca_var_results['Validation MCC'][pca_var_results['Fold']==f'Average of {var_stage}'])
 
+        # If the 
         if valid_mcc > valid_mcc_high:
             valid_mcc_high = valid_mcc
             best_variance = variance
@@ -374,8 +401,8 @@ for name, params, model in clf_zip:
                                          name, stage='SFS')
 
     # Step 5: Perform PCA on the Forward selected model.
-    sfs_pca_model, sfs_pca_results = principal_component_analysis(x_train_full_sfs, x_test_sfs, y_train_full, y_test,
-                                                                  params, name, stage='SFS-PCA')
+    sfs_pca_model, sfs_pca_results = principal_component_analysis(x_train_full_sfs, x_test_sfs, y_train_full, y_test, name,
+                                                                  params, skf, sfs_model, stage='SFS-PCA')
 
     # Conslidate our results:
     print('test\n')
