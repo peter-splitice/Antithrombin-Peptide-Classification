@@ -136,15 +136,13 @@ def classification_models():
     # Hyperparameters to tune.
     rbf_params = {'gamma': [1e-1,1e-2,1e-3,1e-4,'scale','auto'], 'C': np.arange(1,101,5),
                   'class_weight': [None,'balanced'], 'break_ties': [False,True]}
-    lin_params = {}
-    log_params = {}
     rfc_params = {'criterion': ['gini','entropy'], 'max_features': ['sqrt','log2',1.0,0.3], 
                   'ccp_alpha': np.arange(0,0.3,0.1), 'n_estimators': np.arange(1,25,1), 'max_depth': np.arange(2,11,1)}
     knn_params = {'n_neighbors': np.arange(1,55,2), 'weights': ['uniform', 'distance'], 'leaf_size': np.arange(5,41,2),
                   'p': [1, 2], 'keepdims': [False,True]}
     xgb_params = {'max_depth': np.arange(2,11,1), 'n_estimators': np.arange(1,25,1), 'gamma': np.arange(0,4,1),
                   'subsample': [0.5,1], 'lambda': [1,5,9], 'alpha': np.arange(0,1.1,0.2)}
-    params = [rbf_params, lin_params, log_params, rfc_params, knn_params, xgb_params]
+    params = [rbf_params, rfc_params, knn_params, xgb_params]
 
     # Names of the models for use later.
     names = ['SVC with RBF Kernel', 'SVC with Linear Kernel', 'Logistic Regression Classifier', 
@@ -152,12 +150,12 @@ def classification_models():
     
     # List of models.
     rbf_model = SVC(class_weight='balanced')
-    lin_model = SVC(kernel = 'linear', class_weight='balanced')
-    log_model = LogisticRegression(class_weight='balanced', max_iter=500)
+    #lin_model = SVC(kernel = 'linear', class_weight='balanced')
+    #log_model = LogisticRegression(class_weight='balanced', max_iter=500)
     rfc_model = RandomForestClassifier(class_weight='balanced')
     knn_model = KNeighborsClassifier()
     xgb_model = XGBClassifier(scale_pos_weight=8.9038)
-    models = [rbf_model, lin_model, log_model, rfc_model, knn_model, xgb_model]
+    models = [rbf_model, rfc_model, knn_model, xgb_model]
 
     clf_zip = list(zip(names, params, models))
 

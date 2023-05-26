@@ -134,7 +134,7 @@ def kfold_cv(x_train_full, x_test, y_train_full, y_test, stage, skf=StratifiedKF
                                                        valid_mcc, test_accuracy, test_mcc]
     
     # Record the averages too.
-    fold_count = f'Average of {stage}'
+    fold_count = f'{stage}'
     train_accuracy_avg = train_accuracy_sum/FOLDS
     train_mcc_avg = train_mcc_sum/FOLDS
     valid_accuracy_avg = valid_accuracy_sum/FOLDS
@@ -174,6 +174,10 @@ def sequential_forward_selection(x_train_full, y_train_full, name, skf=Stratifie
     ratios = np.arange(0.05, 0.56, 0.10)
     valid_mcc_high = 0
 
+    # Create a DataFrame to save the intermittent results of feature selection
+    cols = ['Features Selected', 'Training Accuracy', 'Training MCC', 'Validation Accuracy', 'Validation MCC']
+    scores_df = pd.DataFrame(columns=cols)
+
     for ratio in ratios:
         logger.info(f'Performing Forward Selection with ratio of {ratio}')
         logger.info('---------------------------------------------------\n')
@@ -183,10 +187,6 @@ def sequential_forward_selection(x_train_full, y_train_full, name, skf=Stratifie
         sfs.fit(x_train_full,y_train_full)
 
         x_train_full_sfs = pd.DataFrame(sfs.transform(x_train_full), columns=sfs.get_feature_names_out())
-
-        # Create a DataFrame to save the intermittent results of feature selection
-        cols = ['Features Selected', 'Training Accuracy', 'Training MCC', 'Validation Accuracy', 'Validation MCC']
-        scores_df = pd.DataFrame(columns=cols)
 
         # Initialize the score measurements and select the final features selected based on best validation MCC.
         train_accuracy_sum = 0
@@ -313,7 +313,7 @@ def principal_component_analysis(x_train_full, x_test, y_train_full, y_test, nam
         model_var, pca_var_results = clf_trainer(x_train_full_pca, x_test_pca, y_train_full, y_test, params, name,
                                                  var_stage, skf, model)
         
-        valid_mcc = float(pca_var_results['Validation MCC'][pca_var_results['Fold']==f'Average of {var_stage}'])
+        valid_mcc = float(pca_var_results['Validation MCC'][pca_var_results['Fold']==f'{var_stage}'])
 
         # If the 
         if valid_mcc > valid_mcc_high:
@@ -366,7 +366,8 @@ def clf_trainer(x_train_full, x_test, y_train_full, y_test, params, name, stage,
     model = hyperparameter_tuning(x_train_full, y_train_full, params, skf, model)
     results_df = kfold_cv(x_train_full, x_test, y_train_full, y_test, stage, skf, model)
 
-    results_df.to_csv(PATH + f'/peter_classification/Results/{name}/{name} {stage} KFold Results.csv')
+    results_df.to_csv(PATH + f'/peter_classification/Results/{name}/{name} {stage} KFold Results.csv',
+                      index=False)
 
     return model, results_df
         
@@ -398,16 +399,25 @@ for name, params, model in clf_zip:
     x_train_full_sfs, sfs = sequential_forward_selection(x_train_full, y_train_full, name, skf, model)
     x_test_sfs = pd.DataFrame(sfs.transform(x_test), columns=sfs.get_feature_names_out())
     sfs_model, sfs_results = clf_trainer(x_train_full_sfs, x_test_sfs, y_train_full, y_test, params,
-                                         name, stage='SFS')
+                                         name, stage='SFS', model=model)
 
     # Step 5: Perform PCA on the Forward selected model.
     sfs_pca_model, sfs_pca_results = principal_component_analysis(x_train_full_sfs, x_test_sfs, y_train_full, y_test, name,
                                                                   params, skf, sfs_model, stage='SFS-PCA')
 
     # Conslidate our results:
-    print('test\n')
-
-
-
-
-print('break')
+    cols = ['Stage', 'Training Accuracy', 'Training MCC', 'Validation Accuracy', 'Validation MCC',
+            'Test Accuracy', 'Test MCC']
+    results_df = pd.DataFrame(columns=cols)
+    # Add the last row of each DataFrame into the consolidated reuslts dataframe.
+    for results in [baseline_results, pca_results, sfs_results, sfs_pca_results]:
+        new_row = {'Stage': results['Fold'][6], 
+                   'Training Accuracy': results['Training Accuracy'][6],
+                   'Training MCC': results['Training MCC'][6],
+                   'Validation Accuracy': results['Validation Accuracy'][6],
+                   'Validation MCC': results['Validation MCC'][6],
+                   'Test Accuracy': results['Test Accuracy'][6],
+                   'Test MCC': results['Test MCC'][6]}
+        results_df.loc[len(results_df)] = new_row
+    
+    results_df.to_csv(PATH + f'/peter_classification/Results/Consolidated results for {name}.csv', index=False)
