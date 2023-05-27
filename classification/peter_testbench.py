@@ -411,13 +411,13 @@ for name, params, model in clf_zip:
     results_df = pd.DataFrame(columns=cols)
     # Add the last row of each DataFrame into the consolidated reuslts dataframe.
     for results in [baseline_results, pca_results, sfs_results, sfs_pca_results]:
-        new_row = {'Stage': results['Fold'][6], 
-                   'Training Accuracy': results['Training Accuracy'][6],
-                   'Training MCC': results['Training MCC'][6],
-                   'Validation Accuracy': results['Validation Accuracy'][6],
-                   'Validation MCC': results['Validation MCC'][6],
-                   'Test Accuracy': results['Test Accuracy'][6],
-                   'Test MCC': results['Test MCC'][6]}
+        new_row = {'Stage': results['Fold'][5], 
+                   'Training Accuracy': results['Training Accuracy'][5],
+                   'Training MCC': results['Training MCC'][5],
+                   'Validation Accuracy': results['Validation Accuracy'][5],
+                   'Validation MCC': results['Validation MCC'][5],
+                   'Test Accuracy': results['Test Accuracy'][5],
+                   'Test MCC': results['Test MCC'][5]}
         results_df.loc[len(results_df)] = new_row
     
     results_df.to_csv(PATH + f'/peter_classification/Results/Consolidated results for {name}.csv', index=False)
