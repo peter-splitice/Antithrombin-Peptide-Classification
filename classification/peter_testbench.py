@@ -243,7 +243,7 @@ def sequential_forward_selection(x_train_full, y_train_full, name, skf=Stratifie
     with open(PATH + f'/peter_classification/Exports/{name}/SFS for {name}.pkl', 'wb') as f:
         pickle.dump(final_sfs, f)
         
-    return final_x_sfs, sfs
+    return final_x_sfs, final_sfs
 
 def principal_component_analysis(x_train_full, x_test, y_train_full, y_test, name, params,
                                  skf=StratifiedKFold(), model=SVC(), stage="PCA"):
@@ -386,10 +386,10 @@ for name, params, model in clf_zip:
     logger.info('-------------------------------------------\n')
 
     # Step 2: Perform Hyperparameter Tuning and record the results
-    model, baseline_results = clf_trainer(x_train_full, x_test, y_train_full, y_test, params,
+    baseline_model, baseline_results = clf_trainer(x_train_full, x_test, y_train_full, y_test, params,
                                           name, stage='Baseline', skf=skf, model=model)
     with open(PATH + f'/peter_classification/Exports/{name}/Baseline model for {name}.pkl', 'wb') as f:
-        pickle.dump(model, f)
+        pickle.dump(baseline_model, f)
 
     # Step 3: Perform PCA on our model
     pca_model, pca_results = principal_component_analysis(x_train_full, x_test, y_train_full, y_test, name, params, skf,

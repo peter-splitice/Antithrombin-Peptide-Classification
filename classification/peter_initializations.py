@@ -145,8 +145,7 @@ def classification_models():
     params = [rbf_params, rfc_params, knn_params, xgb_params]
 
     # Names of the models for use later.
-    names = ['SVC with RBF Kernel', 'SVC with Linear Kernel', 'Logistic Regression Classifier', 
-             'Random Forest Classifier', 'KNN Classifier', 'XGBoost Classifier']
+    names = ['SVC with RBF Kernel', 'Random Forest Classifier', 'KNN Classifier', 'XGBoost Classifier']
     
     # List of models.
     rbf_model = SVC(class_weight='balanced')

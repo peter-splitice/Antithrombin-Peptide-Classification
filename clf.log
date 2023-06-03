@@ -1,0 +1,873 @@
+2023-05-26 20:49:18,121 | INFO | Performing operations for SVC with RBF Kernel:
+2023-05-26 20:49:18,122 | INFO | -------------------------------------------
+
+2023-05-26 20:49:18,122 | INFO | Baseline hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-26 20:49:18,122 | INFO | -------------------------------------------------------------------
+
+2023-05-26 20:49:18,122 | INFO | GridSearchCV Starting:
+2023-05-26 20:49:18,123 | INFO | ----------------------
+
+2023-05-26 20:52:25,845 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 0.1}
+2023-05-26 20:52:25,845 | INFO | ----------------------------------------
+
+2023-05-26 20:52:26,493 | INFO | PCA Starting PCA
+2023-05-26 20:52:26,493 | INFO | --------------------------
+
+2023-05-26 20:52:26,611 | INFO | Selecting 71 principal component making up 75% of the variance:
+
+2023-05-26 20:52:26,612 | INFO | -----------------------------------------------------------------------
+
+2023-05-26 20:52:26,615 | INFO | PCA with 75% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-26 20:52:26,615 | INFO | -------------------------------------------------------------------
+
+2023-05-26 20:52:26,615 | INFO | GridSearchCV Starting:
+2023-05-26 20:52:26,616 | INFO | ----------------------
+
+2023-05-26 20:53:36,117 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': None, 'gamma': 0.1}
+2023-05-26 20:53:36,118 | INFO | ----------------------------------------
+
+2023-05-26 20:53:36,331 | INFO | Selecting 95 principal component making up 80% of the variance:
+
+2023-05-26 20:53:36,331 | INFO | -----------------------------------------------------------------------
+
+2023-05-26 20:53:36,333 | INFO | PCA with 80% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-26 20:53:36,333 | INFO | -------------------------------------------------------------------
+
+2023-05-26 20:53:36,333 | INFO | GridSearchCV Starting:
+2023-05-26 20:53:36,334 | INFO | ----------------------
+
+2023-05-26 20:54:42,308 | INFO | Best parameter set: {'C': 16, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-26 20:54:42,308 | INFO | ----------------------------------------
+
+2023-05-26 20:54:42,511 | INFO | Selecting 125 principal component making up 85% of the variance:
+
+2023-05-26 20:54:42,511 | INFO | -----------------------------------------------------------------------
+
+2023-05-26 20:54:42,513 | INFO | PCA with 85% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-26 20:54:42,513 | INFO | -------------------------------------------------------------------
+
+2023-05-26 20:54:42,513 | INFO | GridSearchCV Starting:
+2023-05-26 20:54:42,514 | INFO | ----------------------
+
+2023-05-26 20:55:54,543 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-26 20:55:54,544 | INFO | ----------------------------------------
+
+2023-05-26 20:55:54,771 | INFO | Selecting 166 principal component making up 90% of the variance:
+
+2023-05-26 20:55:54,772 | INFO | -----------------------------------------------------------------------
+
+2023-05-26 20:55:54,774 | INFO | PCA with 90% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-26 20:55:54,774 | INFO | -------------------------------------------------------------------
+
+2023-05-26 20:55:54,775 | INFO | GridSearchCV Starting:
+2023-05-26 20:55:54,775 | INFO | ----------------------
+
+2023-05-26 20:57:16,197 | INFO | Best parameter set: {'C': 1, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 'scale'}
+2023-05-26 20:57:16,197 | INFO | ----------------------------------------
+
+2023-05-26 20:57:16,513 | INFO | Selecting 231 principal component making up 95% of the variance:
+
+2023-05-26 20:57:16,513 | INFO | -----------------------------------------------------------------------
+
+2023-05-26 20:57:16,516 | INFO | PCA with 95% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-26 20:57:16,516 | INFO | -------------------------------------------------------------------
+
+2023-05-26 20:57:16,517 | INFO | GridSearchCV Starting:
+2023-05-26 20:57:16,517 | INFO | ----------------------
+
+2023-05-26 20:58:59,251 | INFO | Best parameter set: {'C': 1, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 'scale'}
+2023-05-26 20:58:59,251 | INFO | ----------------------------------------
+
+2023-05-26 20:58:59,639 | INFO | Selecting 572 principal component making up 100% of the variance:
+
+2023-05-26 20:58:59,640 | INFO | -----------------------------------------------------------------------
+
+2023-05-26 20:58:59,643 | INFO | PCA with 100% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-26 20:58:59,643 | INFO | -------------------------------------------------------------------
+
+2023-05-26 20:58:59,643 | INFO | GridSearchCV Starting:
+2023-05-26 20:58:59,644 | INFO | ----------------------
+
+2023-05-26 21:01:59,677 | INFO | Best parameter set: {'C': 1, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 'scale'}
+2023-05-26 21:01:59,678 | INFO | ----------------------------------------
+
+2023-05-26 21:02:00,306 | INFO | Forward Selection Starting
+2023-05-26 21:02:00,306 | INFO | --------------------------
+
+2023-05-26 21:02:00,308 | INFO | Performing Forward Selection with ratio of 0.05
+2023-05-26 21:02:00,308 | INFO | ---------------------------------------------------
+
+2023-05-26 21:07:29,211 | INFO | Performing Forward Selection with ratio of 0.15000000000000002
+2023-05-26 21:07:29,212 | INFO | ---------------------------------------------------
+
+2023-05-26 21:24:48,238 | INFO | Performing Forward Selection with ratio of 0.25000000000000006
+2023-05-26 21:24:48,239 | INFO | ---------------------------------------------------
+
+2023-05-26 21:55:55,286 | INFO | Performing Forward Selection with ratio of 0.35000000000000003
+2023-05-26 21:55:55,286 | INFO | ---------------------------------------------------
+
+2023-05-26 23:17:16,048 | INFO | Performing Forward Selection with ratio of 0.45000000000000007
+2023-05-26 23:17:16,051 | INFO | ---------------------------------------------------
+
+2023-05-27 01:36:09,127 | INFO | Performing Forward Selection with ratio of 0.5500000000000002
+2023-05-27 01:36:09,129 | INFO | ---------------------------------------------------
+
+2023-05-27 04:46:41,928 | INFO | Forward Selection Finished.
+2023-05-27 04:46:41,928 | INFO | Beat Feature Count:314
+2023-05-27 04:46:41,929 | INFO | -----------------------------
+2023-05-27 04:46:41,947 | INFO | SFS hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 04:46:41,947 | INFO | -------------------------------------------------------------------
+
+2023-05-27 04:46:41,948 | INFO | GridSearchCV Starting:
+2023-05-27 04:46:41,948 | INFO | ----------------------
+
+2023-05-27 04:48:51,797 | INFO | Best parameter set: {'C': 1, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 'scale'}
+2023-05-27 04:48:51,798 | INFO | ----------------------------------------
+
+2023-05-27 04:48:52,216 | INFO | PCA Starting SFS-PCA
+2023-05-27 04:48:52,216 | INFO | --------------------------
+
+2023-05-27 04:48:52,253 | INFO | Selecting 82 principal component making up 75% of the variance:
+
+2023-05-27 04:48:52,254 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 04:48:52,256 | INFO | SFS-PCA with 75% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 04:48:52,256 | INFO | -------------------------------------------------------------------
+
+2023-05-27 04:48:52,257 | INFO | GridSearchCV Starting:
+2023-05-27 04:48:52,257 | INFO | ----------------------
+
+2023-05-27 04:49:59,446 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-27 04:49:59,446 | INFO | ----------------------------------------
+
+2023-05-27 04:49:59,664 | INFO | Selecting 99 principal component making up 80% of the variance:
+
+2023-05-27 04:49:59,665 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 04:49:59,666 | INFO | SFS-PCA with 80% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 04:49:59,666 | INFO | -------------------------------------------------------------------
+
+2023-05-27 04:49:59,666 | INFO | GridSearchCV Starting:
+2023-05-27 04:49:59,667 | INFO | ----------------------
+
+2023-05-27 04:51:13,649 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-27 04:51:13,650 | INFO | ----------------------------------------
+
+2023-05-27 04:51:13,844 | INFO | Selecting 119 principal component making up 85% of the variance:
+
+2023-05-27 04:51:13,844 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 04:51:13,846 | INFO | SFS-PCA with 85% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 04:51:13,846 | INFO | -------------------------------------------------------------------
+
+2023-05-27 04:51:13,847 | INFO | GridSearchCV Starting:
+2023-05-27 04:51:13,847 | INFO | ----------------------
+
+2023-05-27 04:52:34,873 | INFO | Best parameter set: {'C': 46, 'break_ties': False, 'class_weight': None, 'gamma': 0.1}
+2023-05-27 04:52:34,874 | INFO | ----------------------------------------
+
+2023-05-27 04:52:35,028 | INFO | Selecting 146 principal component making up 90% of the variance:
+
+2023-05-27 04:52:35,029 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 04:52:35,031 | INFO | SFS-PCA with 90% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 04:52:35,031 | INFO | -------------------------------------------------------------------
+
+2023-05-27 04:52:35,032 | INFO | GridSearchCV Starting:
+2023-05-27 04:52:35,032 | INFO | ----------------------
+
+2023-05-27 04:53:59,427 | INFO | Best parameter set: {'C': 11, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-27 04:53:59,427 | INFO | ----------------------------------------
+
+2023-05-27 04:53:59,663 | INFO | Selecting 184 principal component making up 95% of the variance:
+
+2023-05-27 04:53:59,664 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 04:53:59,665 | INFO | SFS-PCA with 95% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 04:53:59,666 | INFO | -------------------------------------------------------------------
+
+2023-05-27 04:53:59,666 | INFO | GridSearchCV Starting:
+2023-05-27 04:53:59,667 | INFO | ----------------------
+
+2023-05-27 04:55:34,742 | INFO | Best parameter set: {'C': 31, 'break_ties': False, 'class_weight': None, 'gamma': 0.1}
+2023-05-27 04:55:34,743 | INFO | ----------------------------------------
+
+2023-05-27 04:55:34,915 | INFO | Selecting 314 principal component making up 100% of the variance:
+
+2023-05-27 04:55:34,916 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 04:55:34,918 | INFO | SFS-PCA with 100% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 04:55:34,918 | INFO | -------------------------------------------------------------------
+
+2023-05-27 04:55:34,919 | INFO | GridSearchCV Starting:
+2023-05-27 04:55:34,919 | INFO | ----------------------
+
+2023-05-27 04:57:53,866 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 0.1}
+2023-05-27 04:57:53,866 | INFO | ----------------------------------------
+
+2023-05-27 04:57:54,171 | INFO | Performing operations for SVC with Linear Kernel:
+2023-05-27 04:57:54,172 | INFO | -------------------------------------------
+
+2023-05-27 04:57:54,172 | INFO | Baseline hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 04:57:54,173 | INFO | -------------------------------------------------------------------
+
+2023-05-27 04:57:54,173 | INFO | GridSearchCV Starting:
+2023-05-27 04:57:54,173 | INFO | ----------------------
+
+2023-05-27 05:44:54,770 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 20}
+2023-05-27 05:44:54,771 | INFO | ----------------------------------------
+
+2023-05-27 05:44:55,153 | INFO | PCA Starting PCA
+2023-05-27 05:44:55,154 | INFO | --------------------------
+
+2023-05-27 05:44:55,221 | INFO | Selecting 71 principal component making up 75% of the variance:
+
+2023-05-27 05:44:55,222 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 05:44:55,224 | INFO | PCA with 75% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 05:44:55,224 | INFO | -------------------------------------------------------------------
+
+2023-05-27 05:44:55,225 | INFO | GridSearchCV Starting:
+2023-05-27 05:44:55,225 | INFO | ----------------------
+
+2023-05-27 06:07:23,693 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 6, 'max_features': 0.3, 'n_estimators': 13}
+2023-05-27 06:07:23,694 | INFO | ----------------------------------------
+
+2023-05-27 06:07:24,076 | INFO | Selecting 95 principal component making up 80% of the variance:
+
+2023-05-27 06:07:24,076 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 06:07:24,078 | INFO | PCA with 80% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 06:07:24,079 | INFO | -------------------------------------------------------------------
+
+2023-05-27 06:07:24,079 | INFO | GridSearchCV Starting:
+2023-05-27 06:07:24,080 | INFO | ----------------------
+
+2023-05-27 06:34:38,621 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 20}
+2023-05-27 06:34:38,622 | INFO | ----------------------------------------
+
+2023-05-27 06:34:38,969 | INFO | Selecting 125 principal component making up 85% of the variance:
+
+2023-05-27 06:34:38,969 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 06:34:38,971 | INFO | PCA with 85% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 06:34:38,972 | INFO | -------------------------------------------------------------------
+
+2023-05-27 06:34:38,972 | INFO | GridSearchCV Starting:
+2023-05-27 06:34:38,973 | INFO | ----------------------
+
+2023-05-27 07:07:51,550 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 4, 'max_features': 'sqrt', 'n_estimators': 23}
+2023-05-27 07:07:51,551 | INFO | ----------------------------------------
+
+2023-05-27 07:07:51,961 | INFO | Selecting 166 principal component making up 90% of the variance:
+
+2023-05-27 07:07:51,962 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 07:07:51,964 | INFO | PCA with 90% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 07:07:51,964 | INFO | -------------------------------------------------------------------
+
+2023-05-27 07:07:51,965 | INFO | GridSearchCV Starting:
+2023-05-27 07:07:51,965 | INFO | ----------------------
+
+2023-05-27 07:49:14,896 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 4, 'max_features': 0.3, 'n_estimators': 23}
+2023-05-27 07:49:14,897 | INFO | ----------------------------------------
+
+2023-05-27 07:49:16,033 | INFO | Selecting 231 principal component making up 95% of the variance:
+
+2023-05-27 07:49:16,034 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 07:49:16,036 | INFO | PCA with 95% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 07:49:16,037 | INFO | -------------------------------------------------------------------
+
+2023-05-27 07:49:16,037 | INFO | GridSearchCV Starting:
+2023-05-27 07:49:16,038 | INFO | ----------------------
+
+2023-05-27 08:43:47,390 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 9, 'max_features': 1.0, 'n_estimators': 23}
+2023-05-27 08:43:47,391 | INFO | ----------------------------------------
+
+2023-05-27 08:43:52,253 | INFO | Selecting 572 principal component making up 100% of the variance:
+
+2023-05-27 08:43:52,254 | INFO | -----------------------------------------------------------------------
+
+2023-05-27 08:43:52,256 | INFO | PCA with 100% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 08:43:52,256 | INFO | -------------------------------------------------------------------
+
+2023-05-27 08:43:52,256 | INFO | GridSearchCV Starting:
+2023-05-27 08:43:52,257 | INFO | ----------------------
+
+2023-05-27 10:45:33,183 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'gini', 'max_depth': 5, 'max_features': 0.3, 'n_estimators': 14}
+2023-05-27 10:45:33,184 | INFO | ----------------------------------------
+
+2023-05-27 10:45:34,692 | INFO | Forward Selection Starting
+2023-05-27 10:45:34,693 | INFO | --------------------------
+
+2023-05-27 10:45:34,694 | INFO | Performing Forward Selection with ratio of 0.05
+2023-05-27 10:45:34,694 | INFO | ---------------------------------------------------
+
+2023-05-27 10:51:32,488 | INFO | Performing Forward Selection with ratio of 0.15000000000000002
+2023-05-27 10:51:32,489 | INFO | ---------------------------------------------------
+
+2023-05-27 11:11:39,754 | INFO | Performing Forward Selection with ratio of 0.25000000000000006
+2023-05-27 11:11:39,755 | INFO | ---------------------------------------------------
+
+2023-05-27 11:51:32,227 | INFO | Performing Forward Selection with ratio of 0.35000000000000003
+2023-05-27 11:51:32,228 | INFO | ---------------------------------------------------
+
+2023-05-27 13:34:32,541 | INFO | Performing Forward Selection with ratio of 0.45000000000000007
+2023-05-27 13:34:32,542 | INFO | ---------------------------------------------------
+
+2023-05-27 16:43:36,569 | INFO | Performing Forward Selection with ratio of 0.5500000000000002
+2023-05-27 16:43:36,569 | INFO | ---------------------------------------------------
+
+2023-05-27 21:04:05,520 | INFO | Forward Selection Finished.
+2023-05-27 21:04:05,521 | INFO | Beat Feature Count:28
+2023-05-27 21:04:05,522 | INFO | -----------------------------
+2023-05-27 21:04:05,537 | INFO | SFS hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-27 21:04:05,538 | INFO | -------------------------------------------------------------------
+
+2023-05-27 21:04:05,538 | INFO | GridSearchCV Starting:
+2023-05-27 21:04:05,539 | INFO | ----------------------
+
+2023-05-27 21:14:01,696 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'gini', 'max_depth': 8, 'max_features': 'sqrt', 'n_estimators': 17}
+2023-05-27 21:14:01,696 | INFO | ----------------------------------------
+
+2023-05-29 17:48:40,995 | INFO | Performing operations for SVC with RBF Kernel:
+2023-05-29 17:48:40,996 | INFO | -------------------------------------------
+
+2023-05-29 17:48:40,996 | INFO | Baseline hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-29 17:48:40,996 | INFO | -------------------------------------------------------------------
+
+2023-05-29 17:48:40,997 | INFO | GridSearchCV Starting:
+2023-05-29 17:48:40,997 | INFO | ----------------------
+
+2023-05-29 17:51:32,905 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 0.1}
+2023-05-29 17:51:32,906 | INFO | ----------------------------------------
+
+2023-05-29 17:51:33,382 | INFO | PCA Starting PCA
+2023-05-29 17:51:33,382 | INFO | --------------------------
+
+2023-05-29 17:51:33,470 | INFO | Selecting 71 principal component making up 75% of the variance:
+
+2023-05-29 17:51:33,471 | INFO | -----------------------------------------------------------------------
+
+2023-05-29 17:51:33,473 | INFO | PCA with 75% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-29 17:51:33,473 | INFO | -------------------------------------------------------------------
+
+2023-05-29 17:51:33,474 | INFO | GridSearchCV Starting:
+2023-05-29 17:51:33,474 | INFO | ----------------------
+
+2023-05-29 17:52:31,959 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': None, 'gamma': 0.1}
+2023-05-29 17:52:31,960 | INFO | ----------------------------------------
+
+2023-05-29 17:52:32,109 | INFO | Selecting 95 principal component making up 80% of the variance:
+
+2023-05-29 17:52:32,110 | INFO | -----------------------------------------------------------------------
+
+2023-05-29 17:52:32,111 | INFO | PCA with 80% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-29 17:52:32,111 | INFO | -------------------------------------------------------------------
+
+2023-05-29 17:52:32,112 | INFO | GridSearchCV Starting:
+2023-05-29 17:52:32,112 | INFO | ----------------------
+
+2023-05-29 17:53:35,271 | INFO | Best parameter set: {'C': 16, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-29 17:53:35,271 | INFO | ----------------------------------------
+
+2023-05-29 17:53:35,467 | INFO | Selecting 125 principal component making up 85% of the variance:
+
+2023-05-29 17:53:35,468 | INFO | -----------------------------------------------------------------------
+
+2023-05-29 17:53:35,469 | INFO | PCA with 85% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-29 17:53:35,469 | INFO | -------------------------------------------------------------------
+
+2023-05-29 17:53:35,469 | INFO | GridSearchCV Starting:
+2023-05-29 17:53:35,470 | INFO | ----------------------
+
+2023-05-29 17:54:46,539 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-29 17:54:46,540 | INFO | ----------------------------------------
+
+2023-05-29 17:54:46,773 | INFO | Selecting 166 principal component making up 90% of the variance:
+
+2023-05-29 17:54:46,773 | INFO | -----------------------------------------------------------------------
+
+2023-05-29 17:54:46,776 | INFO | PCA with 90% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-29 17:54:46,776 | INFO | -------------------------------------------------------------------
+
+2023-05-29 17:54:46,776 | INFO | GridSearchCV Starting:
+2023-05-29 17:54:46,777 | INFO | ----------------------
+
+2023-05-29 17:56:05,761 | INFO | Best parameter set: {'C': 1, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 'scale'}
+2023-05-29 17:56:05,761 | INFO | ----------------------------------------
+
+2023-05-29 17:56:06,074 | INFO | Selecting 231 principal component making up 95% of the variance:
+
+2023-05-29 17:56:06,075 | INFO | -----------------------------------------------------------------------
+
+2023-05-29 17:56:06,077 | INFO | PCA with 95% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-29 17:56:06,077 | INFO | -------------------------------------------------------------------
+
+2023-05-29 17:56:06,077 | INFO | GridSearchCV Starting:
+2023-05-29 17:56:06,077 | INFO | ----------------------
+
+2023-05-29 17:57:44,371 | INFO | Best parameter set: {'C': 1, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 'scale'}
+2023-05-29 17:57:44,372 | INFO | ----------------------------------------
+
+2023-05-29 17:57:44,741 | INFO | Selecting 572 principal component making up 100% of the variance:
+
+2023-05-29 17:57:44,742 | INFO | -----------------------------------------------------------------------
+
+2023-05-29 17:57:44,744 | INFO | PCA with 100% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-29 17:57:44,745 | INFO | -------------------------------------------------------------------
+
+2023-05-29 17:57:44,745 | INFO | GridSearchCV Starting:
+2023-05-29 17:57:44,746 | INFO | ----------------------
+
+2023-05-29 18:00:39,125 | INFO | Best parameter set: {'C': 1, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 'scale'}
+2023-05-29 18:00:39,126 | INFO | ----------------------------------------
+
+2023-05-29 18:00:39,728 | INFO | Forward Selection Starting
+2023-05-29 18:00:39,729 | INFO | --------------------------
+
+2023-05-29 18:00:39,730 | INFO | Performing Forward Selection with ratio of 0.05
+2023-05-29 18:00:39,730 | INFO | ---------------------------------------------------
+
+2023-05-29 18:04:56,778 | INFO | Performing Forward Selection with ratio of 0.15000000000000002
+2023-05-29 18:04:56,778 | INFO | ---------------------------------------------------
+
+2023-05-29 18:18:44,114 | INFO | Performing Forward Selection with ratio of 0.25000000000000006
+2023-05-29 18:18:44,114 | INFO | ---------------------------------------------------
+
+2023-05-29 18:43:13,697 | INFO | Performing Forward Selection with ratio of 0.35000000000000003
+2023-05-29 18:43:13,697 | INFO | ---------------------------------------------------
+
+2023-05-29 19:56:24,516 | INFO | Performing Forward Selection with ratio of 0.45000000000000007
+2023-05-29 19:56:24,516 | INFO | ---------------------------------------------------
+
+2023-05-29 22:13:33,764 | INFO | Performing Forward Selection with ratio of 0.5500000000000002
+2023-05-29 22:13:33,765 | INFO | ---------------------------------------------------
+
+2023-05-30 01:23:47,976 | INFO | Forward Selection Finished.
+2023-05-30 01:23:47,977 | INFO | Beat Feature Count:314
+2023-05-30 01:23:47,977 | INFO | -----------------------------
+2023-05-30 15:36:54,029 | INFO | Performing operations for SVC with RBF Kernel:
+2023-05-30 15:36:54,029 | INFO | -------------------------------------------
+
+2023-05-30 15:36:54,030 | INFO | Baseline hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 15:36:54,030 | INFO | -------------------------------------------------------------------
+
+2023-05-30 15:36:54,030 | INFO | GridSearchCV Starting:
+2023-05-30 15:36:54,031 | INFO | ----------------------
+
+2023-05-30 15:39:30,067 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 0.1}
+2023-05-30 15:39:30,068 | INFO | ----------------------------------------
+
+2023-05-30 15:39:30,529 | INFO | PCA Starting PCA
+2023-05-30 15:39:30,529 | INFO | --------------------------
+
+2023-05-30 15:39:30,618 | INFO | Selecting 71 principal component making up 75% of the variance:
+
+2023-05-30 15:39:30,619 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 15:39:30,621 | INFO | PCA with 75% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 15:39:30,621 | INFO | -------------------------------------------------------------------
+
+2023-05-30 15:39:30,622 | INFO | GridSearchCV Starting:
+2023-05-30 15:39:30,622 | INFO | ----------------------
+
+2023-05-30 15:40:22,854 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': None, 'gamma': 0.1}
+2023-05-30 15:40:22,855 | INFO | ----------------------------------------
+
+2023-05-30 15:40:22,990 | INFO | Selecting 95 principal component making up 80% of the variance:
+
+2023-05-30 15:40:22,991 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 15:40:22,992 | INFO | PCA with 80% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 15:40:22,993 | INFO | -------------------------------------------------------------------
+
+2023-05-30 15:40:22,994 | INFO | GridSearchCV Starting:
+2023-05-30 15:40:22,994 | INFO | ----------------------
+
+2023-05-30 15:41:20,040 | INFO | Best parameter set: {'C': 16, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-30 15:41:20,041 | INFO | ----------------------------------------
+
+2023-05-30 15:41:20,220 | INFO | Selecting 125 principal component making up 85% of the variance:
+
+2023-05-30 15:41:20,220 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 15:41:20,222 | INFO | PCA with 85% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 15:41:20,223 | INFO | -------------------------------------------------------------------
+
+2023-05-30 15:41:20,223 | INFO | GridSearchCV Starting:
+2023-05-30 15:41:20,224 | INFO | ----------------------
+
+2023-05-30 15:42:23,224 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-30 15:42:23,224 | INFO | ----------------------------------------
+
+2023-05-30 15:42:23,424 | INFO | Selecting 166 principal component making up 90% of the variance:
+
+2023-05-30 15:42:23,425 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 15:42:23,426 | INFO | PCA with 90% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 15:42:23,426 | INFO | -------------------------------------------------------------------
+
+2023-05-30 15:42:23,427 | INFO | GridSearchCV Starting:
+2023-05-30 15:42:23,427 | INFO | ----------------------
+
+2023-05-30 15:43:35,980 | INFO | Best parameter set: {'C': 1, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 'scale'}
+2023-05-30 15:43:35,980 | INFO | ----------------------------------------
+
+2023-05-30 15:43:36,258 | INFO | Selecting 231 principal component making up 95% of the variance:
+
+2023-05-30 15:43:36,259 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 15:43:36,260 | INFO | PCA with 95% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 15:43:36,261 | INFO | -------------------------------------------------------------------
+
+2023-05-30 15:43:36,261 | INFO | GridSearchCV Starting:
+2023-05-30 15:43:36,261 | INFO | ----------------------
+
+2023-05-30 15:46:08,607 | INFO | Best parameter set: {'C': 1, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 'scale'}
+2023-05-30 15:46:08,607 | INFO | ----------------------------------------
+
+2023-05-30 15:46:09,009 | INFO | Selecting 572 principal component making up 100% of the variance:
+
+2023-05-30 15:46:09,009 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 15:46:09,012 | INFO | PCA with 100% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 15:46:09,012 | INFO | -------------------------------------------------------------------
+
+2023-05-30 15:46:09,012 | INFO | GridSearchCV Starting:
+2023-05-30 15:46:09,013 | INFO | ----------------------
+
+2023-05-30 15:48:51,368 | INFO | Best parameter set: {'C': 1, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 'scale'}
+2023-05-30 15:48:51,368 | INFO | ----------------------------------------
+
+2023-05-30 15:48:51,942 | INFO | Forward Selection Starting
+2023-05-30 15:48:51,942 | INFO | --------------------------
+
+2023-05-30 15:48:51,943 | INFO | Performing Forward Selection with ratio of 0.05
+2023-05-30 15:48:51,943 | INFO | ---------------------------------------------------
+
+2023-05-30 15:52:55,674 | INFO | Performing Forward Selection with ratio of 0.15000000000000002
+2023-05-30 15:52:55,674 | INFO | ---------------------------------------------------
+
+2023-05-30 16:05:44,634 | INFO | Performing Forward Selection with ratio of 0.25000000000000006
+2023-05-30 16:05:44,635 | INFO | ---------------------------------------------------
+
+2023-05-30 16:29:30,152 | INFO | Performing Forward Selection with ratio of 0.35000000000000003
+2023-05-30 16:29:30,152 | INFO | ---------------------------------------------------
+
+2023-05-30 17:39:31,668 | INFO | Performing Forward Selection with ratio of 0.45000000000000007
+2023-05-30 17:39:31,668 | INFO | ---------------------------------------------------
+
+2023-05-30 19:48:58,380 | INFO | Performing Forward Selection with ratio of 0.5500000000000002
+2023-05-30 19:48:58,380 | INFO | ---------------------------------------------------
+
+2023-05-30 22:53:58,826 | INFO | Forward Selection Finished.
+2023-05-30 22:53:58,826 | INFO | Beat Feature Count:314
+2023-05-30 22:53:58,826 | INFO | -----------------------------
+2023-05-30 22:53:58,831 | INFO | SFS hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 22:53:58,832 | INFO | -------------------------------------------------------------------
+
+2023-05-30 22:53:58,832 | INFO | GridSearchCV Starting:
+2023-05-30 22:53:58,832 | INFO | ----------------------
+
+2023-05-30 22:55:59,697 | INFO | Best parameter set: {'C': 1, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 'scale'}
+2023-05-30 22:55:59,698 | INFO | ----------------------------------------
+
+2023-05-30 22:56:00,076 | INFO | PCA Starting SFS-PCA
+2023-05-30 22:56:00,076 | INFO | --------------------------
+
+2023-05-30 22:56:00,118 | INFO | Selecting 82 principal component making up 75% of the variance:
+
+2023-05-30 22:56:00,118 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 22:56:00,120 | INFO | SFS-PCA with 75% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 22:56:00,120 | INFO | -------------------------------------------------------------------
+
+2023-05-30 22:56:00,120 | INFO | GridSearchCV Starting:
+2023-05-30 22:56:00,120 | INFO | ----------------------
+
+2023-05-30 22:57:00,714 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-30 22:57:00,714 | INFO | ----------------------------------------
+
+2023-05-30 22:57:00,880 | INFO | Selecting 99 principal component making up 80% of the variance:
+
+2023-05-30 22:57:00,880 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 22:57:00,881 | INFO | SFS-PCA with 80% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 22:57:00,882 | INFO | -------------------------------------------------------------------
+
+2023-05-30 22:57:00,882 | INFO | GridSearchCV Starting:
+2023-05-30 22:57:00,882 | INFO | ----------------------
+
+2023-05-30 22:58:07,583 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-30 22:58:07,583 | INFO | ----------------------------------------
+
+2023-05-30 22:58:07,766 | INFO | Selecting 119 principal component making up 85% of the variance:
+
+2023-05-30 22:58:07,766 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 22:58:07,768 | INFO | SFS-PCA with 85% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 22:58:07,768 | INFO | -------------------------------------------------------------------
+
+2023-05-30 22:58:07,768 | INFO | GridSearchCV Starting:
+2023-05-30 22:58:07,768 | INFO | ----------------------
+
+2023-05-30 22:59:21,268 | INFO | Best parameter set: {'C': 46, 'break_ties': False, 'class_weight': None, 'gamma': 0.1}
+2023-05-30 22:59:21,268 | INFO | ----------------------------------------
+
+2023-05-30 22:59:21,408 | INFO | Selecting 146 principal component making up 90% of the variance:
+
+2023-05-30 22:59:21,409 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 22:59:21,410 | INFO | SFS-PCA with 90% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 22:59:21,410 | INFO | -------------------------------------------------------------------
+
+2023-05-30 22:59:21,411 | INFO | GridSearchCV Starting:
+2023-05-30 22:59:21,411 | INFO | ----------------------
+
+2023-05-30 23:00:38,346 | INFO | Best parameter set: {'C': 11, 'break_ties': False, 'class_weight': None, 'gamma': 'scale'}
+2023-05-30 23:00:38,346 | INFO | ----------------------------------------
+
+2023-05-30 23:00:38,555 | INFO | Selecting 184 principal component making up 95% of the variance:
+
+2023-05-30 23:00:38,556 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 23:00:38,557 | INFO | SFS-PCA with 95% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 23:00:38,557 | INFO | -------------------------------------------------------------------
+
+2023-05-30 23:00:38,558 | INFO | GridSearchCV Starting:
+2023-05-30 23:00:38,558 | INFO | ----------------------
+
+2023-05-30 23:02:04,032 | INFO | Best parameter set: {'C': 31, 'break_ties': False, 'class_weight': None, 'gamma': 0.1}
+2023-05-30 23:02:04,033 | INFO | ----------------------------------------
+
+2023-05-30 23:02:04,200 | INFO | Selecting 314 principal component making up 100% of the variance:
+
+2023-05-30 23:02:04,200 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 23:02:04,202 | INFO | SFS-PCA with 100% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 23:02:04,202 | INFO | -------------------------------------------------------------------
+
+2023-05-30 23:02:04,202 | INFO | GridSearchCV Starting:
+2023-05-30 23:02:04,203 | INFO | ----------------------
+
+2023-05-30 23:04:05,193 | INFO | Best parameter set: {'C': 6, 'break_ties': False, 'class_weight': 'balanced', 'gamma': 0.1}
+2023-05-30 23:04:05,194 | INFO | ----------------------------------------
+
+2023-05-30 23:04:05,487 | INFO | Performing operations for Random Forest Classifier:
+2023-05-30 23:04:05,487 | INFO | -------------------------------------------
+
+2023-05-30 23:04:05,487 | INFO | Baseline hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 23:04:05,487 | INFO | -------------------------------------------------------------------
+
+2023-05-30 23:04:05,488 | INFO | GridSearchCV Starting:
+2023-05-30 23:04:05,488 | INFO | ----------------------
+
+2023-05-30 23:50:08,586 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 17}
+2023-05-30 23:50:08,586 | INFO | ----------------------------------------
+
+2023-05-30 23:50:08,884 | INFO | PCA Starting PCA
+2023-05-30 23:50:08,884 | INFO | --------------------------
+
+2023-05-30 23:50:08,957 | INFO | Selecting 71 principal component making up 75% of the variance:
+
+2023-05-30 23:50:08,958 | INFO | -----------------------------------------------------------------------
+
+2023-05-30 23:50:08,959 | INFO | PCA with 75% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-30 23:50:08,959 | INFO | -------------------------------------------------------------------
+
+2023-05-30 23:50:08,960 | INFO | GridSearchCV Starting:
+2023-05-30 23:50:08,960 | INFO | ----------------------
+
+2023-05-31 00:12:05,787 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 5, 'max_features': 'log2', 'n_estimators': 23}
+2023-05-31 00:12:05,787 | INFO | ----------------------------------------
+
+2023-05-31 00:12:06,102 | INFO | Selecting 95 principal component making up 80% of the variance:
+
+2023-05-31 00:12:06,103 | INFO | -----------------------------------------------------------------------
+
+2023-05-31 00:12:06,104 | INFO | PCA with 80% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-31 00:12:06,104 | INFO | -------------------------------------------------------------------
+
+2023-05-31 00:12:06,104 | INFO | GridSearchCV Starting:
+2023-05-31 00:12:06,105 | INFO | ----------------------
+
+2023-05-31 00:38:45,463 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'gini', 'max_depth': 6, 'max_features': 0.3, 'n_estimators': 22}
+2023-05-31 00:38:45,464 | INFO | ----------------------------------------
+
+2023-05-31 00:38:46,006 | INFO | Selecting 125 principal component making up 85% of the variance:
+
+2023-05-31 00:38:46,007 | INFO | -----------------------------------------------------------------------
+
+2023-05-31 00:38:46,008 | INFO | PCA with 85% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-31 00:38:46,008 | INFO | -------------------------------------------------------------------
+
+2023-05-31 00:38:46,009 | INFO | GridSearchCV Starting:
+2023-05-31 00:38:46,009 | INFO | ----------------------
+
+2023-05-31 01:11:17,065 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'gini', 'max_depth': 4, 'max_features': 'sqrt', 'n_estimators': 13}
+2023-05-31 01:11:17,065 | INFO | ----------------------------------------
+
+2023-05-31 01:11:17,263 | INFO | Selecting 166 principal component making up 90% of the variance:
+
+2023-05-31 01:11:17,263 | INFO | -----------------------------------------------------------------------
+
+2023-05-31 01:11:17,265 | INFO | PCA with 90% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-31 01:11:17,265 | INFO | -------------------------------------------------------------------
+
+2023-05-31 01:11:17,265 | INFO | GridSearchCV Starting:
+2023-05-31 01:11:17,266 | INFO | ----------------------
+
+2023-05-31 01:51:46,820 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 6, 'max_features': 0.3, 'n_estimators': 15}
+2023-05-31 01:51:46,821 | INFO | ----------------------------------------
+
+2023-05-31 01:51:47,642 | INFO | Selecting 231 principal component making up 95% of the variance:
+
+2023-05-31 01:51:47,643 | INFO | -----------------------------------------------------------------------
+
+2023-05-31 01:51:47,645 | INFO | PCA with 95% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-31 01:51:47,645 | INFO | -------------------------------------------------------------------
+
+2023-05-31 01:51:47,645 | INFO | GridSearchCV Starting:
+2023-05-31 01:51:47,645 | INFO | ----------------------
+
+2023-05-31 02:45:12,606 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'gini', 'max_depth': 6, 'max_features': 0.3, 'n_estimators': 24}
+2023-05-31 02:45:12,606 | INFO | ----------------------------------------
+
+2023-05-31 02:45:13,776 | INFO | Selecting 572 principal component making up 100% of the variance:
+
+2023-05-31 02:45:13,777 | INFO | -----------------------------------------------------------------------
+
+2023-05-31 02:45:13,779 | INFO | PCA with 100% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-05-31 02:45:13,780 | INFO | -------------------------------------------------------------------
+
+2023-05-31 02:45:13,780 | INFO | GridSearchCV Starting:
+2023-05-31 02:45:13,780 | INFO | ----------------------
+
+2023-05-31 04:45:06,430 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 8, 'max_features': 1.0, 'n_estimators': 23}
+2023-05-31 04:45:06,431 | INFO | ----------------------------------------
+
+2023-05-31 04:45:17,854 | INFO | Forward Selection Starting
+2023-05-31 04:45:17,854 | INFO | --------------------------
+
+2023-05-31 04:45:17,855 | INFO | Performing Forward Selection with ratio of 0.05
+2023-05-31 04:45:17,855 | INFO | ---------------------------------------------------
+
+2023-05-31 04:55:56,773 | INFO | Performing Forward Selection with ratio of 0.15000000000000002
+2023-05-31 04:55:56,773 | INFO | ---------------------------------------------------
+
+2023-05-31 05:54:48,221 | INFO | Performing Forward Selection with ratio of 0.25000000000000006
+2023-05-31 05:54:48,221 | INFO | ---------------------------------------------------
+
+2023-05-31 07:33:26,588 | INFO | Performing Forward Selection with ratio of 0.35000000000000003
+2023-05-31 07:33:26,589 | INFO | ---------------------------------------------------
+
+2023-05-31 11:29:25,048 | INFO | Performing Forward Selection with ratio of 0.45000000000000007
+2023-05-31 11:29:25,048 | INFO | ---------------------------------------------------
+
+2023-05-31 18:08:30,791 | INFO | Performing Forward Selection with ratio of 0.5500000000000002
+2023-05-31 18:08:30,791 | INFO | ---------------------------------------------------
+
+2023-06-01 04:02:03,871 | INFO | Forward Selection Finished.
+2023-06-01 04:02:03,872 | INFO | Beat Feature Count:200
+2023-06-01 04:02:03,874 | INFO | -----------------------------
+2023-06-01 04:02:03,885 | INFO | SFS hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-06-01 04:02:03,885 | INFO | -------------------------------------------------------------------
+
+2023-06-01 04:02:03,886 | INFO | GridSearchCV Starting:
+2023-06-01 04:02:03,886 | INFO | ----------------------
+
+2023-06-01 04:20:47,446 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'gini', 'max_depth': 8, 'max_features': 0.3, 'n_estimators': 21}
+2023-06-01 04:20:47,446 | INFO | ----------------------------------------
+
+2023-06-01 04:20:47,857 | INFO | PCA Starting SFS-PCA
+2023-06-01 04:20:47,857 | INFO | --------------------------
+
+2023-06-01 04:20:47,876 | INFO | Selecting 50 principal component making up 75% of the variance:
+
+2023-06-01 04:20:47,876 | INFO | -----------------------------------------------------------------------
+
+2023-06-01 04:20:47,878 | INFO | SFS-PCA with 75% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-06-01 04:20:47,878 | INFO | -------------------------------------------------------------------
+
+2023-06-01 04:20:47,878 | INFO | GridSearchCV Starting:
+2023-06-01 04:20:47,878 | INFO | ----------------------
+
+2023-06-01 04:38:11,362 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 5, 'max_features': 'sqrt', 'n_estimators': 24}
+2023-06-01 04:38:11,362 | INFO | ----------------------------------------
+
+2023-06-01 04:38:11,689 | INFO | Selecting 63 principal component making up 80% of the variance:
+
+2023-06-01 04:38:11,690 | INFO | -----------------------------------------------------------------------
+
+2023-06-01 04:38:11,691 | INFO | SFS-PCA with 80% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-06-01 04:38:11,691 | INFO | -------------------------------------------------------------------
+
+2023-06-01 04:38:11,691 | INFO | GridSearchCV Starting:
+2023-06-01 04:38:11,692 | INFO | ----------------------
+
+2023-06-01 04:57:51,892 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'gini', 'max_depth': 5, 'max_features': 0.3, 'n_estimators': 13}
+2023-06-01 04:57:51,893 | INFO | ----------------------------------------
+
+2023-06-01 04:57:52,143 | INFO | Selecting 79 principal component making up 85% of the variance:
+
+2023-06-01 04:57:52,144 | INFO | -----------------------------------------------------------------------
+
+2023-06-01 04:57:52,145 | INFO | SFS-PCA with 85% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-06-01 04:57:52,145 | INFO | -------------------------------------------------------------------
+
+2023-06-01 04:57:52,145 | INFO | GridSearchCV Starting:
+2023-06-01 04:57:52,146 | INFO | ----------------------
+
+2023-06-01 05:20:48,086 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'gini', 'max_depth': 7, 'max_features': 0.3, 'n_estimators': 11}
+2023-06-01 05:20:48,086 | INFO | ----------------------------------------
+
+2023-06-01 05:20:48,344 | INFO | Selecting 99 principal component making up 90% of the variance:
+
+2023-06-01 05:20:48,345 | INFO | -----------------------------------------------------------------------
+
+2023-06-01 05:20:48,346 | INFO | SFS-PCA with 90% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-06-01 05:20:48,346 | INFO | -------------------------------------------------------------------
+
+2023-06-01 05:20:48,347 | INFO | GridSearchCV Starting:
+2023-06-01 05:20:48,347 | INFO | ----------------------
+
+2023-06-01 05:47:30,850 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'gini', 'max_depth': 4, 'max_features': 'log2', 'n_estimators': 24}
+2023-06-01 05:47:30,851 | INFO | ----------------------------------------
+
+2023-06-01 05:47:31,096 | INFO | Selecting 128 principal component making up 95% of the variance:
+
+2023-06-01 05:47:31,097 | INFO | -----------------------------------------------------------------------
+
+2023-06-01 05:47:31,098 | INFO | SFS-PCA with 95% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-06-01 05:47:31,098 | INFO | -------------------------------------------------------------------
+
+2023-06-01 05:47:31,099 | INFO | GridSearchCV Starting:
+2023-06-01 05:47:31,099 | INFO | ----------------------
+
+2023-06-01 06:20:13,412 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'gini', 'max_depth': 5, 'max_features': 0.3, 'n_estimators': 12}
+2023-06-01 06:20:13,412 | INFO | ----------------------------------------
+
+2023-06-01 06:20:13,783 | INFO | Selecting 200 principal component making up 100% of the variance:
+
+2023-06-01 06:20:13,783 | INFO | -----------------------------------------------------------------------
+
+2023-06-01 06:20:13,785 | INFO | SFS-PCA with 100% variance hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-06-01 06:20:13,785 | INFO | -------------------------------------------------------------------
+
+2023-06-01 06:20:13,785 | INFO | GridSearchCV Starting:
+2023-06-01 06:20:13,785 | INFO | ----------------------
+
+2023-06-01 07:06:31,037 | INFO | Best parameter set: {'ccp_alpha': 0.0, 'criterion': 'entropy', 'max_depth': 7, 'max_features': 1.0, 'n_estimators': 19}
+2023-06-01 07:06:31,037 | INFO | ----------------------------------------
+
+2023-06-01 07:06:34,312 | INFO | Performing operations for KNN Classifier:
+2023-06-01 07:06:34,313 | INFO | -------------------------------------------
+
+2023-06-01 07:06:34,313 | INFO | Baseline hyperparameter tuning and K-Fold Cross-Validation beginning:
+2023-06-01 07:06:34,313 | INFO | -------------------------------------------------------------------
+
+2023-06-01 07:06:34,313 | INFO | GridSearchCV Starting:
+2023-06-01 07:06:34,314 | INFO | ----------------------
+
